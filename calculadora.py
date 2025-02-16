@@ -17,9 +17,12 @@ class Calculadora:
         return a / b
     
     def fatorial(self, a):
+        if not isinstance(a, int):
+            return "Erro: Fatorial só é definido para números inteiros!"
         if a < 0:
             return "Erro: Fatorial de número negativo não existe!"
         return math.factorial(a)
+
     
     def potencia(self, a, b):
         return a ** b
